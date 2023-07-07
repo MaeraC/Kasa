@@ -1,0 +1,691 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+img {
+    object-fit: cover;
+}
+/* HEADER ***************************************************************
+*************************************************************************/
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 30px;
+}
+.header img {
+    width: 150px;
+    height: 45px;
+}
+.header a {
+    color: #FF6060;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.header a:hover {
+    color: #959595;
+    transition: 0.5s;
+}
+.space {
+    margin-right: 50px;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .header nav {
+        margin: 30px 40px;
+    }
+    .header img {
+        width: 150px;
+        height: 50px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .space {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .header nav {
+        margin: 10px;
+        align-items: center;
+    }
+    .header img {
+        width: 110px;
+        height: 35px;
+    }
+    .nav-link {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .space {
+        margin-right: 10px;
+    }
+}
+/* BANNER ***************************************************************
+*************************************************************************/
+.banner {
+    position: relative;
+    background: url(assets/slogan.png) fixed no-repeat;
+    background-size: 100% 400px;
+    width: 100%;
+    height: 250px;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+
+}
+.banner span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+}
+.banner h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+    color: white;
+    font-size: 45px;
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .banner h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .banner {
+        margin: 20px;
+    }
+    .banner img {
+        height: 100px;
+        border-radius: 10px; 
+    }
+    .banner h2 {
+        font-size: 20px;
+        width: 50%;
+        text-align: left;
+        left: 30%;
+    }
+    .banner span {
+        border-radius: 10px;
+    }
+}
+/* CARDLIST ***************************************************************
+*************************************************************************/
+.card-list {
+    border-radius: 25px;
+    padding: 50px 120px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .card-list {
+        padding: 20px;
+        margin: 40px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .card-list {
+        margin: 20px;
+        border-radius: 10px;
+        padding: 0;
+    }
+}
+.card {
+    position: relative;
+    width: 30%;
+    height: 340px;
+    margin: 20px;
+    margin-bottom: 25px;
+    background-color: #e9e9e99c;
+}
+.card:hover {
+    border: 10px solid #9191919c;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card-price {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: #FF6060;
+    color: white;
+    top: 20px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.card figure {
+    width: 100%;
+    height:100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    position: relative;
+}
+.card figcaption {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    margin: 15px;
+}
+.card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .card {
+        height: 200px;
+        width: 45%;
+    }
+}
+@media screen and (max-width: 599px) {
+    .card {
+        width: 100%;
+        height: 250px;
+    }
+}
+/* CARROUSSEL ***************************************************************
+*************************************************************************/
+.carroussel-container { 
+    width: 100%;
+    height: 500px;
+    position: relative; 
+}
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide-image img {
+    width: 100%;
+    height: 100%;
+}
+.fa-chevron-right, .fa-chevron-left {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-size: 50px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.fa-chevron-left {
+    left: 20px;
+}
+.fa-chevron-right {
+    right: 20px;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .fa-chevron-right, .fa-chevron-left {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 599px) {
+    .fa-chevron-right, .fa-chevron-left {
+        font-size: 20px;
+    }
+}
+/* PRESENTATION / EQUIPMENTS ***************************************************************
+*************************************************************************/
+.presentation {
+    margin: 0 80px;
+    margin-bottom: 40px;
+}
+.part-profile , .part-informations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.part-profile h1 {
+    font-size: 36;
+    color: #FF6060;
+    font-weight: normal;
+    width: 60%;
+}
+.part-profile div {
+    display: flex;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .part-profile img {
+        width: 55px;
+        height: 55px;
+    }
+}
+.part-localisation {
+    color: #FF6060;
+    font-size: 16px;
+    text-align: left;
+}
+.part-informations {
+    margin: 20px 0;
+}
+.part-informations ul {
+    display: flex;
+}
+.part-informations ul li {
+    font-size: 14px;
+    color: white;
+    background: #FF6060;
+    border-radius: 10px;
+    padding: 5px 10px;
+    list-style-type: none;
+    margin-right: 10px
+}
+.rating {
+    color: #FF6060;
+}
+.container-pl {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.container-pl h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.part-profile ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.part-profile button {
+    margin-right: 50px;
+    padding: 7px 20px;
+    background-color: #FF6060;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.part-profile button:hover {
+    cursor: pointer;
+    box-shadow: 2px 5px 10px #808080b6;
+    transition: 0.3s;
+}
+.part-profile ul li:nth-child(2) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+.part-profile ul img {
+    margin: 10px 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.part-profile ul p {
+    color: #FF6060;
+}
+/* MODAL RESERVATION ***************************************************************
+*************************************************************************/
+.modal-reservation {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffffa3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    display: none;
+}
+.modal-reservation form {
+    background: #ff7b7b;
+    padding: 40px;
+    border-radius: 20px;
+    height: 90%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+}
+.modal-reservation form input {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+.modal-reservation button {
+    padding: 9px 20px;
+    background-color: #ff5454;
+    outline: none;
+    border: white 2px solid;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+.modal-reservation button:hover {
+    cursor: pointer;
+    box-shadow: 2px 5px 10px #808080b6;
+    transition: 0.3s;
+}
+.modal-reservation label {
+    font-size: 14px;
+}
+.modal-reservation i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.error-message {
+    color: black;
+    font-size: 13px;
+}
+.confirmation-modal {
+    background: #FF6060;
+    color: white;
+    padding: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 25px;
+    position: relative;
+    border-radius: 20px;
+}
+.confirmation-modal h2 {
+    margin-bottom: 20px;
+}
+.confirmation-modal p {
+    margin: 10px 0;
+}
+.confirmation-modal span {
+    font-weight: bold;
+}
+.confirmation-modal i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+/* DESCRIPTION ***************************************************************
+*************************************************************************/
+.descriptions {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 80px;
+}
+#titre2 {
+    background: #FF6060;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+.titre h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: normal;
+}
+.description , .desc {
+    width: 48%;
+   /* height: 250px;*/
+}
+.desc1 , .description1{
+    width: 60%;
+    margin-bottom: 20px;
+}
+.arrow-ok{
+    font-size: 25px;
+    height: 18px;
+    color: white;
+}
+.arrow-hidden {
+    display: none;
+}
+.desc-open{
+    padding: 20px;
+    line-height: 25px;
+    background: #eaeaea;
+}
+.desc-open1 {
+    line-height: 25px;
+    background: #eaeaea;
+    padding: 20px;
+}
+.desc-close1 {
+    line-height: 25px;
+    background: #eaeaea;
+    display: none;
+   
+}
+.desc-close {
+    display: none;
+}
+.equipments {
+    list-style: none;
+}
+/* ABOUT PAGE ***************************************************************
+*************************************************************************/
+.image-about {
+    position: relative;
+    margin: 50px 0;
+    background: url(assets/bg.png) fixed no-repeat;
+    background-size: 100% 400px;
+    width: 100%;
+    height: 250px;
+}
+.image-about span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bloc {
+    width: 100%;
+    color: #FF6060;
+    margin: 40px 0;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .image-about {
+        padding: 0 40px;
+        border-radius: 10px;
+    }
+    .image-about img {
+        border-radius: 10px;
+    }
+    .about {
+        padding:  0 80px;
+    }
+}
+@media screen and (max-width: 599px) {
+    .image-about {
+        padding: 0 20px; 
+        height: 200px;
+        margin: 20px 0;
+    }
+    .image-about img {
+        border-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .about {
+        padding:  0 20px;
+    }
+    .bloc {
+        margin: 20px 0;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .presentation , .descriptions , .carroussel {
+        margin: 20px 40px;
+    }
+}
+@media screen and (max-width: 599px) {
+    .presentation , .descriptions {
+        margin: 20px;
+        position: relative;
+    }
+    .presentation h1 {
+        font-size: 20px;
+    }
+    .part-profile p {
+        font-size: 13px;
+    }
+    .part-profile {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .part-profile img {
+        width: 35px;
+        height: 35px;
+    }
+    .part-localisation {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .part-informations {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .part-informations ul li {
+        font-size: 10px;
+        margin: 10px 0;
+        margin-right: 10px;
+    }
+    .descriptions h3 {
+        font-size: 14px;
+    }
+    .descriptions i {
+        align-self: center;
+    }
+    .descriptions {
+        display: block;
+        margin: 20px;
+    }
+    .description {
+        width: 100%;
+        color: #FF6060;
+    }
+    .titre {
+        background: #FF6060;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .arrow-ok{
+        width: 28px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .arrow-hidden {
+        display: none;
+    }
+    .titre h3 {
+        font-size: 15px;
+        color: white;
+        font-weight: normal;
+    }
+    .desc-open{
+        padding: 20px;
+        line-height: 25px;
+        background: #F6F6F6;
+        height: 200px;
+    }
+    .desc-close {
+        display: none;
+    }
+    .desc {
+        height: 50px;
+        width: 100%;
+    }
+}
+/* ABOUT PAGE ***************************************************************
+*************************************************************************/
+.filters {
+    display: flex;
+    justify-content: center;
+}
+.filters div {
+    display: flex;
+    margin: 30px;
+    margin-top: 40px;
+    border-radius: 15px;
+    background-color: #FF6060;
+}
+.filters span {
+    color: white;
+    padding: 10px;
+}
+.filters select {
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+/* FOOTER ***************************************************************
+*************************************************************************/
+footer {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+footer img {
+    margin-bottom: 20px;
+    width: 80px;
+}
