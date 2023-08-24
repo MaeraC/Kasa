@@ -1,6 +1,6 @@
 let locations = []
 
-fetch("../datas/locations.json")
+fetch("https://kasaa-app.netlify.app/datas/locations.json")
 .then(res => res.json())
 .then(datas => {
     locations = datas
@@ -20,4 +20,3 @@ fetch("../datas/locations.json")
     })
 })
 
-// https://kasaa-app.netlify.app/datas/locations.json

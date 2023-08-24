@@ -591,6 +591,19 @@ img {
     color: #FF6060;
     margin: 40px 0;
 }
+@media screen and (max-width: 900px) {
+    .about .desc1 , .about .description1 {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .about .desc1 , .about .description1 {
+        width: 90%;
+    }
+    .about {
+        font-size: 15px;
+    }
+}
 
 
 /* ABOUT PAGE ***************************************************************
