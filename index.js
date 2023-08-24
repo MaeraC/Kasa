@@ -1,6 +1,6 @@
 let locations = []
 
-fetch("https://kasaa-app.netlify.app/datas/locations.json")
+fetch("datas/locations.json")
 .then(res => res.json())
 .then(datas => {
     locations = datas
@@ -8,3 +8,5 @@ fetch("https://kasaa-app.netlify.app/datas/locations.json")
     displayCard(locations)
     displayFilters()
 })
+
+// https://kasaa-app.netlify.app/datas/locations.json
