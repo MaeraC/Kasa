@@ -4,7 +4,7 @@ function displayCard(locations) {
     locations.forEach((location) => {
         const card = document.createElement("a")
 
-        card.setAttribute("href", `https://kasaa-app.netlify.app/pages/locations.html?id=${location.id}`)
+        card.setAttribute("href", `../pages/locations.html?id=${location.id}`)
         card.setAttribute("data-price", location.price)
         card.setAttribute("data-property", location.property)
         card.setAttribute("data-equipments", location.equipments)
@@ -22,3 +22,5 @@ function displayCard(locations) {
         cardListSection.appendChild(card)
     })
 }
+
+// https://kasaa-app.netlify.app/pages/locations.html?id=${location.id}
