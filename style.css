@@ -617,6 +617,9 @@ img {
     margin: 30px;
     margin-top: 40px;
     border-radius: 15px;
+    padding: 5px 10px;
+    padding-right: 5px;
+    padding-left: 20px;
     background-color: #FF6060;
 }
 .filters span {
@@ -629,7 +632,7 @@ img {
     border-bottom-right-radius: 10px;
     margin: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     outline: none;
     cursor: pointer;
 }
